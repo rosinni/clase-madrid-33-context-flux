@@ -7,9 +7,10 @@ import "../../styles/demo.css";
 
 export const Demo = () => {
 	const { store, actions } = useContext(Context);
-
+console.log(actions);
 	return (
 		<div className="container">
+			<button onClick={()=>actions.agregarFavs()}>Like</button>
 			<ul className="list-group">
 				{store.demo.map((item, index) => {
 					return (
